@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/drake_equation/static/css/main.34de6062.chunk.css",
+    "main.js": "/drake_equation/static/js/main.89e1b0e8.chunk.js",
+    "main.js.map": "/drake_equation/static/js/main.89e1b0e8.chunk.js.map",
+    "runtime-main.js": "/drake_equation/static/js/runtime-main.e5737c57.js",
+    "runtime-main.js.map": "/drake_equation/static/js/runtime-main.e5737c57.js.map",
+    "static/js/2.b42650bd.chunk.js": "/drake_equation/static/js/2.b42650bd.chunk.js",
+    "static/js/2.b42650bd.chunk.js.map": "/drake_equation/static/js/2.b42650bd.chunk.js.map",
+    "index.html": "/drake_equation/index.html",
+    "precache-manifest.506a26c873a63eb22f71a25aa2367701.js": "/drake_equation/precache-manifest.506a26c873a63eb22f71a25aa2367701.js",
+    "service-worker.js": "/drake_equation/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/drake_equation/static/css/main.34de6062.chunk.css.map",
+    "static/media/westerlund2.jpg": "/drake_equation/static/media/westerlund2.ae4dfb2b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5737c57.js",
+    "static/js/2.b42650bd.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.89e1b0e8.chunk.js"
+  ]
+}
