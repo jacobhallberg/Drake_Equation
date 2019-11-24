@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import StarfieldAnimation from 'react-starfield-animation'
-
-import galaxy from './westerlund2.jpg'
+import StarfieldAnimation from 'react-starfield-animation';
+import EquationBlock from './equationBlock';
+import galaxy from './westerlund2.jpg';
 
 
 class App extends Component {
@@ -30,6 +30,8 @@ class App extends Component {
 						bottom: 0
 					}}
 				/>
+
+                <EquationBlock></EquationBlock>
 			</div>
 		)
 	}

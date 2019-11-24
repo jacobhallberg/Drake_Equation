@@ -1,0 +1,15 @@
+#backgroundDiv {
+    background-color: #141414;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 800px;
+    height: 600px;
+    z-index: 100;
+}
+
+.equation {
+    color:rgb(204, 204, 204);
+    font-size: 25px;
+}
