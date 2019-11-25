@@ -7,5 +7,7 @@
 - Adjust brightness of circle image depending on the magnitude of the slider value for Variables.
 - Write calculation logic for state information of variable components.
 - Display calculation.
+- Add about block.
+- Maybe add photo block with image of creator of drake equation.
 
 [Website Located Here](https://jacobhallberg.github.io/drake_equation/)
