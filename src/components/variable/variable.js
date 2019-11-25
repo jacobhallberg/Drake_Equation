@@ -26,14 +26,15 @@ class Variable extends Component {
 	render() {
 		return (
 			<td>
-				<div class="circle">
-					<p class="variable" data-tip data-for={this.props.variable}>
-						$$ {this.props.variable} $$
-					</p>
+				<p class="variable" data-tip data-for={this.props.variable}>
+					$$ {this.props.variable} $$
+				</p>
 
-					<ReactTooltip id={this.props.variable}>
-						<p> {this.props.variable_info} </p>
-					</ReactTooltip>
+				<ReactTooltip id={this.props.variable}>
+					<p> {this.props.variable_info} </p>
+				</ReactTooltip>
+
+				<div class="circle">
 					
 				</div>
 				<Slider min={0} max={20} defaultValue={3} handle={handle} className={"slider"}/>
