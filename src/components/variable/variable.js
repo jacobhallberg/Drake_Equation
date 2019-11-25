@@ -25,9 +25,17 @@ const handle = (props) => {
 
 class Variable extends Component {
 	render() {
+		let slider
+		let image
+		if (this.props.slider) {
+			slider = <Slider min={0} max={20} defaultValue={3} handle={handle} className={"slider"}/>
+		} else {
+			slider = <div style={{"padding-bottom": "24px"}} />
+		}
+
 		return (
 			<td>
-				<p class="variable" data-tip data-for={this.props.variable}>
+				<p className="variable" data-tip data-for={this.props.variable}>
 					$$ {this.props.variable} $$
 				</p>
 
@@ -35,8 +43,9 @@ class Variable extends Component {
 					<p> {this.props.variable_info} </p>
 				</ReactTooltip>
 
-				<img class="circle" src={test} alt={this.props.variable}/>
-				<Slider min={0} max={20} defaultValue={3} handle={handle} className={"slider"}/>
+				<img className="circle" src={test} alt={this.props.variable}/>
+
+				{slider}
 			</td>
 		)
 	}

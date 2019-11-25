@@ -26,23 +26,29 @@ class EquationBlock extends Component {
 			<Variable variable={this.variables[0]} variable_info={this.variable_infos[0]} />,
 			<Equal />
 		]
+
 		for (var i = 1; i < this.variables.length; i++) {
 			variables.push(
 				<Variable
 					variable={this.variables[i]}
 					variable_info={this.variable_infos[i]}
+					slider={true}
 				/>
 			)
-			variables.push(<Multiplication />)
+			variables.push(<Multiplication/>)
 		}
 
 		return (
 			<div id="backgroundDiv">
-				<div class="equation">
+				<div className="equation">
 					<table align="center">
+						<tbody>
+						<tr>
 
 						{variables.slice(0, variables.length - 1)}
 
+						</tr>
+						</tbody>
 					</table>
 
 				</div>

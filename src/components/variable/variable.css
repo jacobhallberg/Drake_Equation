@@ -7,6 +7,7 @@
 	border-radius: 50%;
 	background: #383E41;
 	background-size: cover;
+	user-select: none;
 }
 
 .variable {

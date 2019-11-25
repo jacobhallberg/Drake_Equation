@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import './operators.css'
 
 class Multiplication extends Component {
 	render() {
 		return (
-			<td> $$ * $$ </td>
+			<td> 
+				<p className="operator">
+					$$ * $$ 
+				</p>
+			</td>
 		)
 	}
 }
