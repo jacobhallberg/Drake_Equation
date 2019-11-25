@@ -1,0 +1,13 @@
+.circle {
+	position: relative;
+	width: 75px;
+	height: 75px;
+	padding: 5% 0;
+	margin: lem auto;
+	border-radius: 50%;
+	background: #383E41;
+}
+
+.variable {
+	margin: -100%;
+}
