@@ -9,4 +9,6 @@
 - Add about block.
 - Maybe add photo block with image of creator of drake equation.
 
+* npm run deploy to push website to .io
+
 [Website Located Here](https://jacobhallberg.github.io/drake_equation/)
