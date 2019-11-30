@@ -1,21 +1,21 @@
 .circle {
-	position: relative;
-	width: 75px;
-	height: 75px;
-	padding: 5% 0;
-	margin: lem auto;
-	border-radius: 50%;
-	background: #383E41;
-	background-size: cover;
-	user-select: none;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    padding: 5% 0;
+    margin: lem auto;
+    border-radius: 50%;
+    background: #383e41;
+    background-size: cover;
+    user-select: none;
 }
 
 .variable {
-	min-height: 30px;
-	height: 60px;
-	margin: -10px;
+    min-height: 30px;
+    height: 60px;
+    margin: -10px;
 }
 
 .slider {
-	margin-top: 10px;
+    margin-top: 10px;
 }
