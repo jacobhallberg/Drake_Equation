@@ -5,7 +5,6 @@ import Slider from 'rc-slider'
 import './variable.css'
 import 'rc-slider/assets/index.css';
 import test from "../../assets/images/test.jpg"
-
 const Handle = Slider.Handle;
 
 const handle = (props) => {
@@ -24,13 +23,31 @@ const handle = (props) => {
 };
 
 class Variable extends Component {
+    constructor(props) {
+        super(props)
+        this.handleSliderChange = this.handleSliderChange.bind(this)
+        this.state = {
+            sliderValue: this.props.default
+        }
+    }
+
+    handleSliderChange(newSliderValue) {
+        this.setState({
+            sliderValue: newSliderValue
+        })
+        this.props.handleValueChange(newSliderValue, this.props.index)
+    }
+
+
 	render() {
-		let slider
-		let image
-		if (this.props.slider) {
-			slider = <Slider min={0} max={20} defaultValue={3} handle={handle} className={"slider"}/>
+        let slider
+        let num
+		if (this.props.result === true) {
+			slider = <div style={{"padding-bottom": "24px"}}/>
+            num = <div id="result">{this.props.product}</div>
 		} else {
-			slider = <div style={{"padding-bottom": "24px"}} />
+			slider = <Slider min={this.props.min} max={this.props.max} defaultValue={this.props.default} handle={handle} onChange={this.handleSliderChange} className={"slider"}/>
+            num = <div className="num">{this.state.sliderValue}</div>
 		}
 
 		return (
@@ -43,9 +60,8 @@ class Variable extends Component {
 					<p> {this.props.variable_info} </p>
 				</ReactTooltip>
 
-				<img className="circle" src={test} alt={this.props.variable}/>
-
-				{slider}
+                {num}
+                {slider}
 			</td>
 		)
 	}

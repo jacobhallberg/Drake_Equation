@@ -8,6 +8,9 @@ class Multiplication extends Component {
 				<p className="operator">
 					$$ * $$ 
 				</p>
+				<p className="operator">
+					$$ * $$ 
+				</p>
 			</td>
 		)
 	}
@@ -16,7 +19,14 @@ class Multiplication extends Component {
 class Equal extends Component {
 	render() {
 		return (
-			<td> $$ = $$ </td>
+			<td> 
+				<p className="operator">
+					$$ = $$ 
+				</p>
+				<p className="operator">
+					$$ = $$ 
+				</p>
+			</td>
 		)
 	}
 }
