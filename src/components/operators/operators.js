@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './operators.css'
+import React, { Component } from "react";
+import "./operators.css";
 
 class Multiplication extends Component {
 	render() {

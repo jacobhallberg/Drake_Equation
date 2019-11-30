@@ -100,4 +100,4 @@ class EquationBlock extends Component {
 	}
 }
 
-export default EquationBlock
+export default EquationBlock;
