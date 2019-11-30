@@ -127,7 +127,7 @@ class EquationBlock extends Component {
         variables = variables.slice(0, variables.length - 1);
 
         return (
-            <div style={{ "z-index": "100", width: "1300px" }}>
+            <div className="content">
                 <div id="backgroundDiv">
                     <h1 id="header">The Drake Equation</h1>
                     <div className="equation">

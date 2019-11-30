@@ -27,3 +27,8 @@
 p {
     color: white;
 }
+
+.content {
+    z-index: 100;
+    width: 1300px;
+}
