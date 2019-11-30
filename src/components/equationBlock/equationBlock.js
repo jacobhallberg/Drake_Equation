@@ -1,61 +1,29 @@
 import React, { Component } from 'react'
 import Variable from '../variable/variable.js'
 import { Multiplication, Equal } from '../operators/operators.js'
+import VariableObj from './variable_obj'
 import './equationBlock.css'
 
 class EquationBlock extends Component {
 	constructor(props) {
 		super(props);
         this.handleValueChange = this.handleValueChange.bind(this)
-		this.variables = ["N", "R_★", "f_p", "n_e", "f_L", "f_i", "f_c", "L"]
-		this.variable_infos = [
-			"The number of civilizations in our galaxy with which communication is possible.",
-			"The average rate of star formation per year in our galaxy.",
-			"The fraction of those stars with planets.",
-			"The average number of those planets that may develop an ecosystem.",
-			"The fraction of those planets that succeed in developing life.",
-			"The fraction of those planets with life that develop intelligent life.",
-			"The fraction of those planets with intelligent life that develop interstellar communication.",
-			"The average length of time such civilizations survive and continue to send communications."
-        ]
+        this.product_variable = "N"
+        this.product_info = "The number of civilizations in our galaxy with which communication is possible."
 
-        //todo: make cleaner w objects
-        this.variable_defaults = [
-            10,
-            10,
-            10,
-            10,
-            10,
-            10,
-            10,
-            10,
-        ]
-
-        this.variable_min = [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-        ]
-
-        this.variable_max = [
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
-            20,
+        this.variables = [
+           new VariableObj("R_★", "The average rate of star formation per year in our galaxy.", 0, 20, 1),
+           new VariableObj("f_p", "The fraction of those stars with planets.", 0, 20, 1),
+           new VariableObj("n_e", "The average number of those planets that may develop an ecosystem.", 0, 20, 1),
+           new VariableObj("f_L", "The fraction of those planets that succeed in developing life.", 0, 20, 1),
+           new VariableObj("f_i", "The fraction of those planets with life that develop intelligent life.", 0, 20, 1),
+           new VariableObj("f_c", "The fraction of those planets with intelligent life that develop interstellar communication.", 0, 20, 1),
+           new VariableObj("L", "The average length of time such civilizations survive and continue to send communications.", 0, 20, 1),
         ]
 
         var sliderValues = []
-        for (var i = 0; i < this.variable_defaults.length; i++){
-            sliderValues.push(this.variable_defaults[i])
+        for (var i = 0; i < this.variables.length; i++){
+            sliderValues.push(this.variables[i].defaultValue)
         }
 
         this.state = {
@@ -69,6 +37,7 @@ class EquationBlock extends Component {
         this.setState({
             sliderValues: newValues
         })
+        console.log(this.state.sliderValues)
     }
 
 	render() {
@@ -78,18 +47,18 @@ class EquationBlock extends Component {
         }
 
 		var variables = [
-			<Variable variable={this.variables[0]} variable_info={this.variable_infos[0]} result={true} product={product}/>,
+			<Variable variable={this.product_variable} variable_info={this.product_info} result={true} product={product}/>,
 			<Equal />
 		]
         
-		for (var i = 1; i < this.variables.length; i++) {
+		for (var i = 0; i < this.variables.length; i++) {
 			variables.push(
 				<Variable
-					variable={this.variables[i]}
-                    variable_info={this.variable_infos[i]}
-                    min={this.variable_min[i]}
-                    max={this.variable_max[i]}
-                    default={this.variable_defaults[i]}
+					variable={this.variables[i].label}
+                    variable_info={this.variables[i].info}
+                    min={this.variables[i].min}
+                    max={this.variables[i].max}
+                    default={this.variables[i].defaultValue}
                     handleValueChange={this.handleValueChange}
                     slider={true}
                     result={false}
