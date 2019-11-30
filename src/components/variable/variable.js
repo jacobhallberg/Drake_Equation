@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import ReactTooltip from "react-tooltip";
-import Tooltip from "rc-tooltip";
-import Slider from "rc-slider";
-import "./variable.css";
-import "rc-slider/assets/index.css";
-import test from "../../assets/images/test.jpg";
-
+import React, { Component } from 'react'
+import ReactTooltip from 'react-tooltip'
+import Tooltip from 'rc-tooltip'
+import Slider from 'rc-slider'
+import './variable.css'
+import 'rc-slider/assets/index.css';
+import test from "../../assets/images/test.jpg"
 const Handle = Slider.Handle;
 
 const handle = props => {
@@ -24,39 +23,48 @@ const handle = props => {
 };
 
 class Variable extends Component {
-    render() {
-        let slider;
-
-		if (this.props.slider) {
-            slider = (
-                <Slider
-                    min={0}
-                    max={20}
-                    defaultValue={3}
-                    handle={handle}
-                    className={"slider"}
-                />
-            );
-        } else {
-            slider = <div style={{ "padding-bottom": "24px" }} />;
+    constructor(props) {
+        super(props)
+        this.handleSliderChange = this.handleSliderChange.bind(this)
+        this.state = {
+            sliderValue: this.props.default
         }
-
-        return (
-            <td>
-                <p className="variable" data-tip data-for={this.props.variable}>
-                    $$ {this.props.variable} $$
-                </p>
-
-                <ReactTooltip id={this.props.variable}>
-                    <p> {this.props.variable_info} </p>
-                </ReactTooltip>
-
-                <img className="circle" src={test} alt={this.props.variable} />
-
-                {slider}
-            </td>
-        );
     }
+
+    handleSliderChange(newSliderValue) {
+        this.setState({
+            sliderValue: newSliderValue
+        })
+        this.props.handleValueChange(newSliderValue, this.props.index)
+    }
+
+
+	render() {
+        let slider
+        let num
+		if (this.props.result) {
+			slider = <div style={{"padding-bottom": "24px"}}/>
+            num = <div id="result">{this.props.product}</div>
+		} else {
+			slider = <Slider min={this.props.min} max={this.props.max} defaultValue={this.props.default} handle={handle} onChange={this.handleSliderChange} className={"slider"}/>
+            num = <div className="num">{this.state.sliderValue}</div>
+		}
+
+		return (
+			<td>
+				<p className="variable" data-tip data-for={this.props.variable}>
+					$$ {this.props.variable} $$
+				</p>
+
+				<ReactTooltip id={this.props.variable}>
+					<p> {this.props.variable_info} </p>
+				</ReactTooltip>
+
+                {num}
+                {slider}
+			</td>
+		)
+	}
 }
 
 export default Variable;
