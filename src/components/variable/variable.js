@@ -42,7 +42,7 @@ class Variable extends Component {
 	render() {
         let slider
         let num
-		if (this.props.result === true) {
+		if (this.props.result) {
 			slider = <div style={{"padding-bottom": "24px"}}/>
             num = <div id="result">{this.props.product}</div>
 		} else {
