@@ -1,0 +1,21 @@
+.main_block {
+    margin-top: 100px;
+}
+
+.sub_block {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.summary {
+    float: left;
+    width: 70%;
+    margin: 30px 0px 10px 30px;
+}
+
+#drake {
+    margin: 30px 30px 10px 10px;
+    padding-top: 7px;
+    height: 255px;
+    float: right;
+}
