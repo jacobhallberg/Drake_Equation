@@ -65,16 +65,22 @@ class Variable extends Component {
 
         return (
             <td>
-                <p className="variable" data-tip data-for={this.props.variable}>
-                    $$ {this.props.variable} $$
-                </p>
+                <div>
+                    <p
+                        className="variable"
+                        data-tip
+                        data-for={this.props.variable}
+                    >
+                        $$ {this.props.variable} $$
+                    </p>
 
-                <ReactTooltip id={this.props.variable}>
-                    <p> {this.props.variable_info} </p>
-                </ReactTooltip>
+                    <ReactTooltip id={this.props.variable}>
+                        <p> {this.props.variable_info} </p>
+                    </ReactTooltip>
 
-                {num}
-                {slider}
+                    {num}
+                    {slider}
+                </div>
             </td>
         );
     }
