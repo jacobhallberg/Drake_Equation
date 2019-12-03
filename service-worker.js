@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/drake_equation/precache-manifest.668ebb225e3abf840c2b027e041eb6d4.js"
+  "/drake_equation/precache-manifest.744e51994b1935b7261d7f54e534091a.js"
 );
 
 self.addEventListener('message', (event) => {
