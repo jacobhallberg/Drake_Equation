@@ -3,7 +3,6 @@ import Variable from "../variable/variable.js";
 import { Multiplication, Equal } from "../operators/operators.js";
 import VariableObj from "./variable_obj";
 import "./equationBlock.css";
-import InformationBlock from "../informationBlock/informationBlock";
 
 class EquationBlock extends Component {
     constructor(props) {
@@ -137,7 +136,6 @@ class EquationBlock extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <InformationBlock></InformationBlock>
                 </div>
             </div>
         );
