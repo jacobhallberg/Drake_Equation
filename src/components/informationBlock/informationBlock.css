@@ -1,6 +1,5 @@
 .main_block {
     margin-top: 1%;
-    margin-left: 7%;
 }
 
 .sub_block {
@@ -16,14 +15,18 @@
 }
 
 #drake {
-    vertical-align: middle;
     width: 100%;
-    height: auto;
-    margin-left: 4%;
 }
 
 p {
     font-size: 30px;
     font-size: .9vw;
     font-size: 1.7vh;
+}
+
+.image_container {
+    height: 100%;
+    display: flex;
+    justify-content: center; /* vertical */
+    padding-left: 1%;
 }

@@ -44,7 +44,7 @@ class informationBlock extends Component {
                                         fully realized.
                                     </p>
                                 </div>
-                                <td>
+                                <td className="image_container">
                                     <img
                                         id="drake"
                                         src="https://www.seti.org/sites/default/files/styles/medium/public/2018-09/frank-drake-400px.png?itok=DaB0i1TN"
