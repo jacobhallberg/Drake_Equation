@@ -43,7 +43,7 @@ class Variable extends Component {
         let num;
         if (this.props.result) {
             slider = <div style={{ "padding-bottom": "24px" }} />;
-            num = <div id="result">{this.props.product.toFixed(0)}</div>;
+            num = <div className="outer" id="result">{this.props.product.toFixed(0)}</div>;
         } else {
             slider = (
                 <Slider
@@ -65,7 +65,7 @@ class Variable extends Component {
 
         return (
             <td>
-                <div>
+                <div className="outer">
                     <p
                         className="variable"
                         data-tip

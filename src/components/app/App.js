@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import StarfieldAnimation from "react-starfield-animation";
 import EquationBlock from "../equationBlock/equationBlock";
 import galaxy from "../../assets/images/westerlund2.jpg";
+import InformationBlock from "../informationBlock/informationBlock";
+import "./App.css"
+
 
 class App extends Component {
     render() {
@@ -13,7 +16,8 @@ class App extends Component {
                     minHeight: "100vh",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center"
+                    alignItems: "center",
+
                 }}
             >
                 <StarfieldAnimation
@@ -29,7 +33,11 @@ class App extends Component {
                     }}
                 />
 
+                <div className="block">
                 <EquationBlock></EquationBlock>
+                <InformationBlock></InformationBlock>
+                </div>
+
             </div>
         );
     }
